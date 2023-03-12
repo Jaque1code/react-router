@@ -1,0 +1,32 @@
+ .viewActiva {
+     color:red;
+     padding-left: 20px;
+}
+ .view {
+    color: black;
+    padding-left: 20px;
+}
+
+.imgHome {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.pokemonView {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+
+
+}
+
+.detalleView {
+     display: flex;
+     flex-direction:row;
+     justify-content: center;
+     align-items: center;
+
+}

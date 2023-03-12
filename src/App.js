@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./style.css";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Barra from "./components/Barra.jsx";
+import DetallePersonaje from "./views/DetallePersonaje.jsx";
+import Home from "./views/Home.jsx";
+import Personajes from "./views/Personajes.jsx";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+        <BrowserRouter>
+        <Barra></Barra>
+         <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/personajes" element={<Personajes></Personajes>}></Route>
+            <Route path="/personajes/:id" element={<DetallePersonaje></DetallePersonaje>}></Route>
+            <Route path="*" element={<div>Error</div>}></Route>
+         </Routes>
+        </BrowserRouter>
+
     </div>
   );
 }
